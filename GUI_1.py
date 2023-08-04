@@ -10,12 +10,12 @@ def UI(string_list):
                 text = text.replace("Human：", "")
                 strMsg = "用户:" + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '\n'
                 txtMsgList.insert(END, strMsg, 'greencolor')
-                txtMsgList.insert(END, string_list[index.get()] + '\n')
+                txtMsgList.insert(END, text + '\n')
             elif text.startswith("AI："):
                 text = text.replace("AI：","")
                 strMsg = "AI:" + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '\n'
                 txtMsgList.insert(END, strMsg, 'redcolor')
-                txtMsgList.insert(END, string_list[index.get()] + '\n')
+                txtMsgList.insert(END, text + '\n')
             else:
                 txtMsgList.insert(END, '此行输入开头不合法' + '\n')
         else:
